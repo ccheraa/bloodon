@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import { QueryClient } from '@tanstack/react-query';
 import { getAuth } from "firebase/auth";
 import firebase from "firebase/compat/app";
 
@@ -25,3 +26,5 @@ export const app = firebase.initializeApp(firebaseConfig);
 export const auth = getAuth();
 
 export const db = firebase.firestore();
+
+export const query = new QueryClient();
